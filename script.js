@@ -1,24 +1,22 @@
-// Placeholder for interactivity
-// Example: Shuffle gallery items
-const shuffleBtn = document.getElementById('shuffle');
-const grid = document.querySelector('.grid');
+// Interactive gallery upload
+const galleryForm = document.getElementById('gallery-form');
+const galleryGrid = document.getElementById('gallery-grid');
+const galleryUpload = document.getElementById('gallery-upload');
 
-if (shuffleBtn && grid) {
-  shuffleBtn.addEventListener('click', () => {
-    const items = Array.from(grid.children);
-    items.sort(() => Math.random() - 0.5);
-    items.forEach(item => grid.appendChild(item));
+if (galleryForm && galleryGrid && galleryUpload) {
+  galleryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const file = galleryUpload.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const img = document.createElement('img');
+        img.src = event.target.result;
+        img.alt = "User uploaded tattoo";
+        galleryGrid.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    }
   });
 }
-// Placeholder for interactivity
-// Example: Shuffle gallery items
-const shuffleBtn = document.getElementById('shuffle');
-const grid = document.querySelector('.grid');
 
-if (shuffleBtn && grid) {
-  shuffleBtn.addEventListener('click', () => {
-    const items = Array.from(grid.children);
-    items.sort(() => Math.random() - 0.5);
-    items.forEach(item => grid.appendChild(item));
-  });
-}
