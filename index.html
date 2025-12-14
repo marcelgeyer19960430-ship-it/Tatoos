@@ -4,28 +4,34 @@
   <meta charset="UTF-8">
   <title>After Midnight Tattoos — Marcel Geyer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tattoo portfolio by Marcel Geyer — authentic flash, stencils, and booking in Johannesburg.">
+  <meta name="description" content="Tattoo studio in Johannesburg by Marcel Geyer. Authentic flash, custom designs, and booking.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
   <header class="site-header">
-    <h1>After Midnight Tattoos</h1>
-    <nav>
-      <a href="#gallery">Gallery</a>
-      <a href="#booking">Booking</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
+    <div class="logo">After Midnight Tattoos
+cat << 'EOF' > style.css
+body { margin:0; font-family:Arial,sans-serif; background:#111; color:#eee }
+.site-header { background:#000; padding:20px; display:flex; justify-content:space-between; align-items:center }
+.logo { font-size:20px; font-weight:bold }
+.nav a { color:#eee; margin-left:16px; text-decoration:none }
+.nav a:hover { color:#e63946 }
 
-  <main>
-    <!-- Your sections here -->
-  </main>
+.hero { display:flex; flex-direction:column; align-items:center; padding:40px 20px; background:#222 }
+.hero-gallery { display:flex; gap:10px; overflow-x:auto; margin-bottom:20px }
+.hero-gallery img { height:200px; border-radius:8px }
+.hero-text h1 { font-size:28px; margin-bottom:10px }
+.cta-buttons .btn { background:#e63946; color:#fff; padding:10px 16px; margin-right:10px; text-decoration:none; border-radius:6px }
+.cta-buttons .btn.secondary { background:#444 }
 
-  <footer>
-    <p>&copy; After Midnight Tattoos — Marcel Geyer</p>
-  </footer>
+.section { padding:40px 20px; max-width:800px; margin:auto }
+.artist-profile { display:flex; gap:20px; align-items:center }
+.artist-profile img { width:160px; border-radius:8px }
 
-  <script src="script.js"></script>
-</body>
-</html>
+form { display:grid; gap:12px; max-width:500px }
+label { display:grid; gap:4px }
+input, textarea { padding:10px; border-radius:6px; border:none; background:#333; color:#fff }
+button { background:#e63946; color:#fff; padding:10px 16px; border:none; border-radius:6px }
+
+.site-footer { text-align:center; padding:20px; color:#999 }

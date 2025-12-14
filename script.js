@@ -1,4 +1,5 @@
-// Shuffle gallery items when button is clicked
+// Placeholder for interactivity
+// Example: Shuffle gallery items
 const shuffleBtn = document.getElementById('shuffle');
 const grid = document.querySelector('.grid');
 
