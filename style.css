@@ -1,19 +1,8 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-header {
-  background: #111;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-nav a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-}
-section {
-  padding: 20px;
-}
+body { margin:0; font-family:Arial,sans-serif; background:#111; color:#eee }
+.site-header { background:#000; padding:20px; display:flex; justify-content:space-between; align-items:center }
+.logo { font-size:20px; font-weight:bold }
+.nav a { color:#eee; margin-left:16px; text-decoration:none }
+.nav a:hover { color:#e63946 }
+.hero { padding:40px 20px; background:#222; text-align:center }
+.hero h1 { font-size:28px; margin-bottom:10px }
+.site-footer { text-align:center; padding:20px; color:#999 }
